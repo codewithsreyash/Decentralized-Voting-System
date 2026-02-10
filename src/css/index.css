@@ -53,6 +53,17 @@ body {
   padding: 20px;
 }
 
+/* Utility alignment */
+.text-center {
+  text-align: center;
+}
+
+#head,
+#vote,
+#account {
+  text-align: center;
+}
+
 /* Animated floating particles */
 body::before {
   content: '';

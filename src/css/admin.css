@@ -375,6 +375,63 @@ textarea:focus {
   transform: translateX(5px);
 }
 
+/* Admin action buttons (Add Candidate / Define Dates) */
+#addCandidate,
+#addDate {
+  width: 100%;
+  max-width: 350px;
+  padding: 18px 30px;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 20px rgba(25, 138, 123, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+#addCandidate:hover,
+#addDate:hover {
+  background: var(--gradient-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 107, 139, 0.4);
+  letter-spacing: 1.5px;
+}
+
+#addCandidate:active,
+#addDate:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(25, 138, 123, 0.4);
+}
+
+#addCandidate::before,
+#addDate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+#addCandidate:hover::before,
+#addDate:hover::before {
+  left: 100%;
+}
+
 /* Custom Checkbox & Radio */
 .custom-checkbox,
 .custom-radio {
