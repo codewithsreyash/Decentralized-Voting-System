@@ -35,7 +35,7 @@ contract Voting {
               
        voters[msg.sender] = true;
        
-       candidates[candidateID].voteCount ++;      
+       candidates[candidateID].voteCount++;      
     }
     
     function checkVote() public view returns(bool){
